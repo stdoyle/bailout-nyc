@@ -258,7 +258,7 @@
       });
     };
     
-        const randomlyChooseBusiness = () => {
+    const randomlyChooseBusiness = () => {
       var random_business_index = Math.floor((Math.random() * number_of_businesses) + 1);
       document.getElementById("search").value = businesses[random_business_index]['business_name'];
       searchFilter();
