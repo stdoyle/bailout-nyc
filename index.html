@@ -126,7 +126,8 @@
         });
       }
     };
-
+    var businesses;
+    var number_of_businesses;
     const parseSheetResult = result => {
       let colMap = {
         '1': 'business_name',
@@ -147,9 +148,10 @@
         let cellValue = e['gs$cell']['$t'];
         rows[rowIndex][key] = cellValue;
       });
+      businesses = rows;
+      number_of_businesses = rows.length;
       return rows;
     };
-
     const drawTable = sheet => {
       let t = document.getElementById('sheet');
       t.innerHTML = '';
